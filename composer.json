@@ -1,0 +1,20 @@
+{
+  "name": "conn/javascript-control",
+  "description": "Controle das bibliotecas de javascript e dependencias dos projetos",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Edinei J. Bauer",
+      "email": "edineibauer@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "JavascriptControl": "src/"
+    }
+  }
+}
