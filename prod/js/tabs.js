@@ -109,6 +109,15 @@ $(function ($) {
             resize: function ($ontab, $resize) {
                 funcao.dragResize($ontab, $resize, 'r');
             },
+            reazusteMinimalize: function () {
+                var i = 0;
+                $(".ontab").each(function () {
+                    if($(this).attr("data-minimize") === "1") {
+                        $(this).css("left", i * parseInt($(this).css("min-width")));
+                        i++;
+                    }
+                });
+            },
             minimize: function ($panel) {
                 if ($panel.attr("data-minimize") === "1") {
                     $panel.find("header").off("click");
@@ -131,13 +140,7 @@ $(function ($) {
                         funcao.dragResize($panel, $panel.find("header"), 'd');
                     }
 
-                    var i = 0;
-                    $(".ontab").each(function () {
-                        if($(this).attr("data-minimize") === "1") {
-                            $(this).css("left", i * parseInt($(this).css("min-width")));
-                            i++;
-                        }
-                    });
+                    panel.reazusteMinimalize();
 
                     setTimeout(function () {
                         $panel.css("transition-duration", "0s");
@@ -206,6 +209,10 @@ $(function ($) {
                 }
             },
             close: function ($panel) {
+                if($panel.attr("data-minimize") === "1") {
+                    $panel.attr("data-minimize", 0);
+                    panel.reazusteMinimalize();
+                }
                 $panel.remove();
             },
             open: function () {
