@@ -1,0 +1,86 @@
+.ontab {
+    position: fixed;
+    float: left;
+    width: 90%;
+    background: #FFFFFF;
+    border:solid 1px darkcyan;
+    -webkit-box-shadow: 0px 2px 17px -3px rgba(117,117,117,1);
+    -moz-box-shadow: 0px 2px 17px -3px rgba(117,117,117,1);
+    box-shadow: 0px 2px 17px -3px rgba(117,117,117,1);
+    transition-property: width height left top;
+    transition-duration: 0s;
+    transition-timing-function: ease;
+}
+
+.ontab header {
+    height: 30px;
+    width: 100%;
+    float: left;
+}
+
+.ontab header .title{
+    float: left;
+    padding:5px 10px;
+    cursor: default;
+    width: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #FFF;
+    overflow: hidden;
+    height:16px;
+}
+.ontab header .title:first-letter{
+    text-transform: uppercase;
+}
+
+.ontab article {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    float: left;
+    word-wrap: break-word;
+}
+
+.ontab header button {
+    float: right;
+    background: #FFFFFF;
+    width: 50px;
+    height: 30px;
+    overflow: hidden;
+    font-size: 1.1em;
+    border: none;
+    outline:none;
+    cursor: default;
+    transition: 1s easy;
+}
+
+.ontab header button .maxi {
+    border: solid 1px #111;
+    padding: 0 5px;
+    font-size: 0.4em;
+}
+
+.ontab header button:hover {
+    background: #DDD;
+}
+
+.ontab header .close:hover {
+    background: orangered;
+    color: #FFFFFF;
+}
+
+.jDrag {
+    width: 100%;
+}
+
+.jResize {
+    width: 15px;
+    height:15px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+}
